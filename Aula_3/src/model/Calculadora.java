@@ -2,26 +2,26 @@ package model;
 
 public class Calculadora {
 	
-	public int CalcSoma (int Primeiro, int Segundo) {
-		int Soma = Primeiro + Segundo;
+	public float CalcSoma (float Primeiro, float Segundo) {
+		float Soma = Primeiro + Segundo;
 		return Soma;
 	}
 
 
-	public int CalcSubtrair (int Primeiro, int Segundo) {
-		int Subtrair = Primeiro - Segundo;
+	public float CalcSubtrair (float Primeiro, float Segundo) {
+		float Subtrair = Primeiro - Segundo;
 		return Subtrair;
 	}
 
 	
-	public int CalcMultiplicar (int Primeiro, int Segundo) {
-		int Multiplicar = Primeiro * Segundo;
+	public float CalcMultiplicar (float Primeiro, float Segundo) {
+		float Multiplicar = Primeiro * Segundo;
 		return Multiplicar;
 	}
 	
 
-	public int CalcDividir (int Primeiro, int Segundo) {
-		int Dividir = Primeiro / Segundo;
+	public float CalcDividir (float Primeiro, float Segundo) {
+		float Dividir = Primeiro / Segundo;
 		return Dividir;
 	}
 } 

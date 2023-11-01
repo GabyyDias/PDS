@@ -101,10 +101,11 @@ btnCalcular.addActionListener(new ActionListener() {
 		int primeiro = Integer.valueOf(Primeiro.getText());
         int segundo = Integer.valueOf(Segundo.getText());
         Calculadora calculo = new Calculadora();
-        int adicao = calculo.CalcSoma(primeiro, segundo);
-        int subtracao = calculo.CalcSubtrair(primeiro, segundo);
-        int multiplicacao = calculo.CalcMultiplicar(primeiro, segundo);
-        int divisao = calculo.CalcDividir(primeiro, segundo);
+        float adicao = calculo.CalcSoma(primeiro, segundo);
+        float subtracao = calculo.CalcSubtrair(primeiro, segundo);
+        float multiplicacao = calculo.CalcMultiplicar(primeiro, segundo);
+        float
+        divisao = calculo.CalcDividir(primeiro, segundo);
         if(Somar.isSelected()) {
             lblResposta.setText("Resultado:"+adicao);
         }
