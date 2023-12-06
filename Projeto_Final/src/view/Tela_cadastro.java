@@ -5,6 +5,9 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import model.Hospede;
+
 import javax.swing.JLabel;
 import net.miginfocom.swing.MigLayout;
 import javax.swing.ImageIcon;
@@ -24,7 +27,6 @@ public class Tela_cadastro extends JFrame {
 	private static final long serialVersionUID = 1L;
 	private JPanel txtGenero;
 	private JTextField txtNome;
-	private JTextField textField_1;
 	private JTextField txtNacionalidade;
 	private JTextField txtCep;
 	private JTextField txtEndereco;
@@ -61,7 +63,7 @@ public class Tela_cadastro extends JFrame {
 		setBounds(100, 100, 1920, 1080);
 		txtGenero = new JPanel();
 		txtGenero.setBorder(new EmptyBorder(5, 5, 5, 5));
-
+//oi delicia 
 		setContentPane(txtGenero);
 		
 		JLabel lblNewLabel = new JLabel("");
@@ -87,10 +89,6 @@ public class Tela_cadastro extends JFrame {
 		JLabel lblGenero = new JLabel("Gênero:");
 		lblGenero.setBounds(553, 503, 100, 16);
 		lblGenero.setFont(new Font("Tahoma", Font.BOLD, 13));
-		
-		textField_1 = new JTextField();
-		textField_1.setBounds(553, 530, 206, 20);
-		textField_1.setColumns(25);
 		
 		JLabel lblNacionalidade = new JLabel("Nacionalidade:");
 		lblNacionalidade.setBounds(553, 600, 100, 16);
@@ -206,7 +204,6 @@ public class Tela_cadastro extends JFrame {
 		txtGenero.add(txtNome);
 		txtGenero.add(lblNome);
 		txtGenero.add(lblGenero);
-		txtGenero.add(textField_1);
 		txtGenero.add(lblNacionalidade);
 		txtGenero.add(txtNacionalidade);
 		txtGenero.add(lblCep);
@@ -214,7 +211,7 @@ public class Tela_cadastro extends JFrame {
 		txtGenero.add(lblEndereco);
 		txtGenero.add(txtEndereco);
 		
-		JButton btnCancelar = new JButton("Cancelar");
+		JButton btnCancelar = new JButton("Limpar");
 		btnCancelar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				txtNome.setText("");
@@ -238,7 +235,47 @@ public class Tela_cadastro extends JFrame {
 		txtGenero.add(btnCancelar);
 		
 		JButton btnSalvar = new JButton("Salvar");
+		btnSalvar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				Hospede puxa = new Hospede (); 
+				
+				String Nome = txtNome.getText(); 
+				String Sobrenome = txtSobrenome.getText(); 
+				String Nacionalidade = txtNacionalidade.getText(); 
+				Integer Cep = Integer.parseInt(txtCep.getText());
+				String Endereco = txtEndereco.getText(); 
+				Integer Data = Integer.parseInt(txtData.getText());
+				Integer Cpf = Integer.parseInt(txtCpf.getText());
+				String Estado = txtEstado.getText(); 
+				Integer Telefone = Integer.parseInt(txtTelefone.getText());
+				Integer Rg = Integer.parseInt(txtRg.getText());
+				String Email = txtEmail.getText(); 
+				String Cidade = txtCidade.getText(); 
+				
+				puxa.setNome(Nome);
+				puxa.setSobrenome(Sobrenome);
+				puxa.setNacionalidade(Nacionalidade);
+				puxa.setCep(Cep);
+				puxa.setEndereco(Endereco);
+				puxa.setData(Data);
+				puxa.setCpf(Cpf);
+				puxa.setEstado(Estado);
+				puxa.setTelefone(Telefone);
+				puxa.setRg(Rg);
+				puxa.setEmail(Email);
+				puxa.setCidade(Cidade);
+				
+				
+				
+				
+			}
+		});
 		btnSalvar.setBounds(1399, 739, 200, 30);
 		txtGenero.add(btnSalvar);
+		
+		JComboBox comboBox = new JComboBox();
+		comboBox.setBounds(553, 530, 206, 20);
+		txtGenero.add(comboBox);
 	}
 }
