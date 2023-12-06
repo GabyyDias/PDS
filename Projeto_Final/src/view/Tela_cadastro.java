@@ -15,6 +15,9 @@ import javax.swing.GroupLayout.Alignment;
 import javax.swing.LayoutStyle.ComponentPlacement;
 import javax.swing.JTextField;
 import javax.swing.JComboBox;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class Tela_cadastro extends JFrame {
 
@@ -179,10 +182,6 @@ public class Tela_cadastro extends JFrame {
 		
 		JLabel lblNewLabel_4 = new JLabel("");
 		lblNewLabel_4.setBounds(1417, 804, 0, 0);
-		
-		JLabel BotaoSalvar = new JLabel("");
-		BotaoSalvar.setBounds(1399, 720, 250, 45);
-		BotaoSalvar.setIcon(new ImageIcon("C:\\Users\\Aluno\\Downloads\\Rectangle 54.png"));
 		txtGenero.setLayout(null);
 		txtGenero.add(lblSobrenome);
 		txtGenero.add(txtSobrenome);
@@ -201,7 +200,6 @@ public class Tela_cadastro extends JFrame {
 		txtGenero.add(lblCidade);
 		txtGenero.add(txtCidade);
 		txtGenero.add(lblNewLabel_4);
-		txtGenero.add(BotaoSalvar);
 		txtGenero.add(lblNewLabel);
 		txtGenero.add(lblNewLabel_1);
 		txtGenero.add(lblNewLabel_2);
@@ -216,9 +214,31 @@ public class Tela_cadastro extends JFrame {
 		txtGenero.add(lblEndereco);
 		txtGenero.add(txtEndereco);
 		
-		JLabel cancelar = new JLabel("Cancelar");
-		cancelar.setFont(new Font("Tahoma", Font.BOLD, 17));
-		cancelar.setBounds(1474, 807, 100, 14);
-		txtGenero.add(cancelar);
+		JButton btnCancelar = new JButton("Cancelar");
+		btnCancelar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				txtNome.setText("");
+				textField_1.setText("");
+				txtNacionalidade.setText("");
+				txtCep.setText("");
+				txtEndereco.setText("");
+				txtSobrenome.setText("");
+				txtData.setText("");
+				txtCpf.setText("");
+				txtEstado.setText("");
+				txtTelefone.setText("");
+				txtRg.setText("");
+				txtEmail.setText("");
+				txtCidade.setText("");
+				
+				
+			}
+		});
+		btnCancelar.setBounds(1400, 803, 200, 30);
+		txtGenero.add(btnCancelar);
+		
+		JButton btnSalvar = new JButton("Salvar");
+		btnSalvar.setBounds(1399, 739, 200, 30);
+		txtGenero.add(btnSalvar);
 	}
 }
